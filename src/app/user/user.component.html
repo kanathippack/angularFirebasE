@@ -12,7 +12,7 @@
         <img class="card-img-top image" src="https://via.placeholder.com/400x300" *ngIf="!user.image" alt="User image">
         <div *ngIf='user.provider != "password"'class="card-body">
           <h4 class="card-title">{{user.name}}</h4>
-          <p class="card-text">This is an example of Social Authentication using Firebase in an Angular 7 web app. </p>
+          <p class="card-text">This is an example of Social Authentication using Firebase in an Angular 8 web app. </p>
         </div>
         <div *ngIf='user.provider == "password"'class="card-body">
           <form [formGroup]="profileForm">

@@ -12,8 +12,16 @@ export class UserService {
    public afAuth: AngularFireAuth
  ){
  }
+  get currentUser():boolean
+  {
+      var user = firebase.auth().currentUser;
 
-
+      if (user) {
+        return false
+      } else {
+        return true
+      }
+ }
   getCurrentUser(){
     return new Promise<any>((resolve, reject) => {
       var user = firebase.auth().onAuthStateChanged(function(user){

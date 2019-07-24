@@ -54,13 +54,15 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     MatAutocompleteModule,
