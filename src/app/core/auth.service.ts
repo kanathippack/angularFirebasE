@@ -5,14 +5,12 @@ import * as firebase from 'firebase/app';
 
 @Injectable()
 export class AuthService {
-  authState: any = null;
+ 
   constructor(
    public afAuth: AngularFireAuth
  ){}
  
- get  authenticated(): boolean {
-  return this.authState !== null;
-}
+
   doFacebookLogin(){
     return new Promise<any>((resolve, reject) => {
       let provider = new firebase.auth.FacebookAuthProvider();
@@ -20,7 +18,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(res => {
         resolve(res);
-        this.authState = 'yes'
+    
       }, err => {
         console.log(err);
         reject(err);
@@ -35,7 +33,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(res => {
         resolve(res);
-        this.authState = 'yes'
+        
       }, err => {
         console.log(err);
         reject(err);
@@ -52,7 +50,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then(res => {
         resolve(res);
-        this.authState = 'yes'
+      
       }, err => {
         console.log(err);
         reject(err);
@@ -65,7 +63,7 @@ export class AuthService {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
       .then(res => {
         resolve(res);
-        this.authState = 'yes'
+     
       }, err => reject(err))
     })
   }
@@ -75,7 +73,7 @@ export class AuthService {
       firebase.auth().signInWithEmailAndPassword(value.email, value.password)
       .then(res => {
         resolve(res);
-        this.authState = 'yes'
+      
       }, err => reject(err))
     })
   }
@@ -84,7 +82,7 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       if(firebase.auth().currentUser){
         this.afAuth.auth.signOut();
-        this.authState = null
+       
         resolve();
       }
       else{

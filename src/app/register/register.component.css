@@ -15,4 +15,8 @@
   .success{
     color: green;
   }
+  .matcard{
+    max-width: 600px;
+    
   
+  }
