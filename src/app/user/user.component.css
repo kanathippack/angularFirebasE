@@ -8,7 +8,62 @@
     margin-top: 10px;
   }
   
-  .image {
+  .image2 {
     width: 100%
   }
+  .filter-by-age {
+    color: #6c757d;
+}
+.title {
+      align-self: center;
+ }
   
+.age-slider {
+      width: 85%;
+}
+.users-list {
+    padding: 40px 60px;
+}
+.image-col {
+      text-align:center;
+}
+.image {
+      position: absolute;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        left: 5%;
+        top: 5%;
+}
+.text-col {
+      margin: auto 0px;
+}
+.actions-col {
+      text-align: center;
+      margin: auto 0px;
+}
+.action {
+        line-height: 1;
+}
+.icon {
+        font-size: 20px;
+}
+    
+
+
+
+
+.example-card {
+      text-align: center;
+      max-width: 400px;
+      margin: auto 0px;
+    }
+    
+    .example-header-image {
+      background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+      background-size: cover;
+    }
+  .image2{
+
+      width: 100%;
+  }

@@ -8,8 +8,8 @@ import { AuthGuard } from './core/auth.guard';
 import { HomeComponent } from './home/home.component';
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
-  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent  , canActivate: [AuthGuard]},
+  { path: 'register', component: RegisterComponent  , canActivate: [AuthGuard]},
   { path: 'home', component: HomeComponent , canActivate: [AuthGuard]},
   { path: 'user', component: UserComponent,  resolve: { data: UserResolver}
 
