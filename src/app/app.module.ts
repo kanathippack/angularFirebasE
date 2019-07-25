@@ -55,6 +55,7 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +104,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false }),
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, BrowserAnimationsModule // imports firebase/auth, only needed for auth features
